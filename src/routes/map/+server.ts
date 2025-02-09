@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { error, json } from '@sveltejs/kit';
 import type { Account, Mapping } from '../../models/types.svelte';
+export const prerender = false;
 
 export const POST = async ({ request }): Promise<any> => {
 	const { config, data }: { config: Mapping[]; data: Account[] } = await request.json();
